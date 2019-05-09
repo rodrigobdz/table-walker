@@ -2,6 +2,7 @@
 	"name": "table-walker",
 	"version": "0.0.0",
 	"description": "Keyboard navigation for HTML tables",
+	"browser": "dist/umd/table-walker.js",
 	"license": "MIT",
 	"repository": "rodrigobdz/table-walker",
 	"author": {
@@ -13,16 +14,22 @@
 		"node": ">=6"
 	},
 	"scripts": {
-		"test": "xo && nyc ava"
+		"build": "rollup -c",
+		"dev": "rollup -c -w",
+		"test": "node test/test.js",
+		"pretest": "npm run build"
 	},
 	"files": [
-		"index.js"
+		"dist"
 	],
 	"keywords": [
 		""
 	],
 	"dependencies": {},
 	"devDependencies": {
+		"rollup": "^1.0.0",
+		"rollup-plugin-commonjs": "^9.2.0",
+		"rollup-plugin-node-resolve": "^4.0.0",
 		"ava": "^1.4.1",
 		"codecov": "^3.3.0",
 		"nyc": "^14.0.0",
