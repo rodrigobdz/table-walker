@@ -4,7 +4,7 @@ export default class CellIndexCalculator {
 	constructor(table) {
 		this.table = table;
 		this.lookup = null;
-		this.computeTableCellIndexes()
+		this.computeTableCellIndexes();
 	}
 
 	// Source: https://stackoverflow.com/a/1303404

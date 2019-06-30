@@ -35,6 +35,9 @@
 		"nyc": "^14.0.0",
 		"xo": "^0.24.0"
 	},
+	"xo": {
+		"env": "browser"
+	},
 	"nyc": {
 		"reporter": [
 			"lcov",
